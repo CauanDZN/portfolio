@@ -33,9 +33,9 @@ export function HeroSection() {
             height={80}
           />
           <AnimatedHeading className="mobile:text-center desktop:text-center">
-            <span className="">UI Designer</span> &<br />
+            <span className="">Backend Developer</span> &<br />
             <span className="inline-flex bg-gradient-to-r text-zinc-400 desktop:from-neutral-900 desktop:via-slate-500 desktop:to-neutral-500 bg-[200%_auto] bg-clip-text leading-tight text-transparent desktop:dark:from-neutral-100 desktop:dark:via-slate-400 dark:to-neutral-400">
-              Fullstack Developer
+              IA Engineer
             </span>
           </AnimatedHeading>
           <p className="paragraph-animated mt-6 text-lg text-slate-400 mobile:max-w-[90%] mobile:text-center desktop:max-w-[60%] desktop:text-center">

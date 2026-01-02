@@ -12,10 +12,6 @@ import colors from 'tailwindcss/colors'
 import prismaIcon from '../assets/icons/prisma.svg'
 import radixIcon from '../assets/icons/radix-ui.svg'
 import styledComponentsIcon from '../assets/icons/styled-components.svg'
-import ImgEeepLmb from '../assets/projects/eeep-lmb.png'
-import ImgDashgo from '../assets/projects/dashgo.png'
-import ImgPedroPortfolio from '../assets/projects/pedro-portfolio.png'
-import ImgHabits from '../assets/projects/habits.jpg'
 
 export function ProjectsSection() {
   return (
@@ -39,16 +35,17 @@ export function ProjectsSection() {
           e o desejo de levar o desenvolvimento de aplicações a um novo nível.
         </p>
       </div>
-      <div className="mt-16 flex flex-col mobile:gap-10 desktop:gap-24">
+
+      <div className="mt-16 flex w-full flex-col mobile:gap-10 desktop:gap-24">
+        {/* Portfólio - Pedro Yuri */}
         <div
           data-aos="fade-right"
           data-aos-duration="700"
           data-aos-once="true"
           className="flex w-full items-center gap-10 mobile:flex-col desktop:flex-row"
         >
-          <img src={ImgPedroPortfolio} alt="" className="rounded-xl" width={800} />
-          <div>
-            <div className="mb-4 flex items-center justify-start gap-3">
+          <div className="w-full rounded-2xl border border-slate-800/60 bg-slate-900/30 p-8">
+            <div className="mb-4 flex flex-wrap items-center justify-start gap-3">
               <div className="w-fit overflow-hidden rounded-lg border border-transparent bg-gradient-to-b from-slate-700 to-slate-700/30 bg-origin-border">
                 <div className="flex items-center justify-center gap-2 bg-gradient-to-b from-slate-900 to-slate-900/40 px-6 py-2 text-slate-300">
                   <ReactOriginalIcon
@@ -58,6 +55,7 @@ export function ProjectsSection() {
                   <span className="text-sm text-indigo-200">ReactJS</span>
                 </div>
               </div>
+
               <div className="w-fit overflow-hidden rounded-lg border border-transparent bg-gradient-to-b from-slate-700 to-slate-700/30 bg-origin-border">
                 <div className="flex items-center justify-center gap-2 bg-gradient-to-b from-slate-900 to-slate-900/40 px-6 py-2 text-slate-300">
                   <img
@@ -70,14 +68,17 @@ export function ProjectsSection() {
                 </div>
               </div>
             </div>
+
             <h2 className="inline-flex bg-gradient-to-r text-white from-neutral-900 via-slate-500 to-neutral-500 bg-[200%_auto] bg-clip-text text-center text-3xl font-semibold leading-tight tracking-tighter text-transparent dark:from-neutral-100 dark:via-slate-400 dark:to-neutral-400">
               Portfólio - Pedro Yuri
             </h2>
-            <p className=" text-left text-lg text-slate-400">
-              Este é o portfólio do meu amigo Pedro, que trabalha na área de cibersegurança.
-              O projeto foi desenvolvido com ReactJS e Styled Components.
+
+            <p className="mt-2 text-left text-lg text-slate-400">
+              Portfólio desenvolvido em ReactJS e Styled Components para um profissional
+              da área de cibersegurança.
             </p>
-            <div className="mt-4 flex items-center gap-3">
+
+            <div className="mt-4 flex flex-wrap items-center gap-3">
               <a
                 href="https://pedroyuri.vercel.app/"
                 target="_blank"
@@ -97,14 +98,15 @@ export function ProjectsSection() {
             </div>
           </div>
         </div>
+
+        {/* Habits */}
         <div
           data-aos="fade-left"
           data-aos-duration="700"
           data-aos-once="true"
           className="flex w-full items-center gap-10 mobile:mt-10 mobile:flex-col desktop:flex-row-reverse"
         >
-          <img src={ImgHabits} alt="" className="rounded-xl" width={800} />
-          <div className="flex h-full flex-col flex-wrap gap-4">
+          <div className="w-full rounded-2xl border border-slate-800/60 bg-slate-900/30 p-8">
             <div className="mb-4 flex flex-wrap items-center justify-start gap-3">
               <div className="w-fit overflow-hidden rounded-lg border border-transparent bg-gradient-to-b from-slate-700 to-slate-700/30 bg-origin-border">
                 <div className="flex items-center justify-center gap-2 bg-gradient-to-b from-slate-900 to-slate-900/40 px-6 py-2 text-slate-300">
@@ -113,10 +115,11 @@ export function ProjectsSection() {
                     color={colors.indigo['300']}
                   />
                   <span className="text-sm text-indigo-200">
-                    ReactJS/React-native
+                    ReactJS/React Native
                   </span>
                 </div>
               </div>
+
               <div className="w-fit overflow-hidden rounded-lg border border-transparent bg-gradient-to-b from-slate-700 to-slate-700/30 bg-origin-border">
                 <div className="flex items-center justify-center gap-2 bg-gradient-to-b from-slate-900 to-slate-900/40 px-6 py-2 text-slate-300">
                   <NodejsPlainIcon
@@ -126,17 +129,14 @@ export function ProjectsSection() {
                   <span className="text-sm text-indigo-200">NodeJS</span>
                 </div>
               </div>
+
               <div className="w-fit overflow-hidden rounded-lg border border-transparent bg-gradient-to-b from-slate-700 to-slate-700/30 bg-origin-border">
                 <div className="flex items-center justify-center gap-2 bg-gradient-to-b from-slate-900 to-slate-900/40 px-6 py-2 text-slate-300">
-                  <img
-                    src={prismaIcon}
-                    alt="Ícone da biblioteca styled components"
-                    width={20}
-                    height={20}
-                  />
+                  <img src={prismaIcon} alt="Ícone do Prisma" width={20} height={20} />
                   <span className="text-sm text-indigo-200">Prisma</span>
                 </div>
               </div>
+
               <div className="w-fit overflow-hidden rounded-lg border border-transparent bg-gradient-to-b from-slate-700 to-slate-700/30 bg-origin-border">
                 <div className="flex items-center justify-center gap-2 bg-gradient-to-b from-slate-900 to-slate-900/40 px-6 py-2 text-slate-300">
                   <TailwindcssPlainIcon
@@ -146,27 +146,25 @@ export function ProjectsSection() {
                   <span className="text-sm text-indigo-200">TailwindCSS</span>
                 </div>
               </div>
+
               <div className="w-fit overflow-hidden rounded-lg border border-transparent bg-gradient-to-b from-slate-700 to-slate-700/30 bg-origin-border">
                 <div className="flex items-center justify-center gap-2 bg-gradient-to-b from-slate-900 to-slate-900/40 px-6 py-2 text-slate-300">
-                  <img
-                    src={radixIcon}
-                    alt="Ícone da biblioteca styled components"
-                    width={20}
-                    height={20}
-                  />
+                  <img src={radixIcon} alt="Ícone do Radix UI" width={20} height={20} />
                   <span className="text-sm text-indigo-200">Radix UI</span>
                 </div>
               </div>
             </div>
+
             <h2 className="inline-flex bg-gradient-to-r text-white from-neutral-900 via-slate-500 to-neutral-500 bg-[200%_auto] bg-clip-text text-center text-3xl font-semibold leading-tight tracking-tighter text-transparent dark:from-neutral-100 dark:via-slate-400 dark:to-neutral-400">
               Habits
             </h2>
-            <p className=" text-left text-lg text-slate-400">
-              Essa aplicação permite que os usuários adicionem uma lista de
-              hábitos a serem cumpridos ao longo do dia. A aplicação foi
-              desenvolvida durante o NLW Setup promovido pela Rocketseat
+
+            <p className="mt-2 text-left text-lg text-slate-400">
+              Aplicação para cadastrar e acompanhar hábitos diários, desenvolvida durante
+              o NLW Setup da Rocketseat.
             </p>
-            <div className="mt-4 flex items-center gap-3">
+
+            <div className="mt-4 flex flex-wrap items-center gap-3">
               <a
                 href="https://github.com/CauanDZN/habits"
                 target="_blank"
@@ -178,15 +176,16 @@ export function ProjectsSection() {
             </div>
           </div>
         </div>
+
+        {/* Site da EEEP LMB */}
         <div
           data-aos="fade-right"
           data-aos-duration="700"
           data-aos-once="true"
           className="flex w-full items-center gap-10 mobile:mt-10 mobile:flex-col desktop:flex-row"
         >
-          <img src={ImgEeepLmb} alt="" className="rounded-xl" width={800} />
-          <div className="flex h-full flex-col flex-wrap gap-4">
-            <div className="mb-4 flex flex-col justify-start gap-3">
+          <div className="w-full rounded-2xl border border-slate-800/60 bg-slate-900/30 p-8">
+            <div className="mb-4 flex flex-wrap items-center justify-start gap-3">
               <div className="w-fit overflow-hidden rounded-lg border border-transparent bg-gradient-to-b from-slate-700 to-slate-700/30 bg-origin-border">
                 <div className="flex items-center justify-center gap-2 bg-gradient-to-b from-slate-900 to-slate-900/40 px-6 py-2 text-slate-300">
                   <Html5PlainIcon
@@ -196,6 +195,7 @@ export function ProjectsSection() {
                   <span className="text-sm text-indigo-200">HTML</span>
                 </div>
               </div>
+
               <div className="w-fit overflow-hidden rounded-lg border border-transparent bg-gradient-to-b from-slate-700 to-slate-700/30 bg-origin-border">
                 <div className="flex items-center justify-center gap-2 bg-gradient-to-b from-slate-900 to-slate-900/40 px-6 py-2 text-slate-300">
                   <Css3PlainIcon
@@ -205,6 +205,7 @@ export function ProjectsSection() {
                   <span className="text-sm text-indigo-200">CSS</span>
                 </div>
               </div>
+
               <div className="w-fit overflow-hidden rounded-lg border border-transparent bg-gradient-to-b from-slate-700 to-slate-700/30 bg-origin-border">
                 <div className="flex items-center justify-center gap-2 bg-gradient-to-b from-slate-900 to-slate-900/40 px-6 py-2 text-slate-300">
                   <JavascriptPlainIcon
@@ -215,15 +216,17 @@ export function ProjectsSection() {
                 </div>
               </div>
             </div>
+
             <h2 className="inline-flex bg-gradient-to-r text-white from-neutral-900 via-slate-500 to-neutral-500 bg-[200%_auto] bg-clip-text text-center text-3xl font-semibold leading-tight tracking-tighter text-transparent dark:from-neutral-100 dark:via-slate-400 dark:to-neutral-400">
               Site da EEEP Leonel de Moura Brizola
             </h2>
-            <p className=" text-left text-lg text-slate-400">
-              Site desenvolvido para a escola EEEP Leonel de Moura Brizola
-              com o intuito de divulgar informações sobre a escola e suas
-              atividades.
+
+            <p className="mt-2 text-left text-lg text-slate-400">
+              Site desenvolvido para a escola EEEP Leonel de Moura Brizola para divulgar
+              informações institucionais e atividades.
             </p>
-            <div className="mt-4 flex items-center gap-3">
+
+            <div className="mt-4 flex flex-wrap items-center gap-3">
               <a
                 href="https://eeep-lmb.vercel.app/"
                 target="_blank"
@@ -232,6 +235,7 @@ export function ProjectsSection() {
               >
                 Visitar <ArrowUpRight weight="bold" size={18} />
               </a>
+
               <a
                 href="https://github.com/CauanDZN/eeep-lmb"
                 target="_blank"
@@ -243,19 +247,15 @@ export function ProjectsSection() {
             </div>
           </div>
         </div>
+
+        {/* Dashgo */}
         <div
           data-aos="fade-left"
           data-aos-duration="700"
           data-aos-once="true"
           className="flex w-full items-center gap-10 mobile:mt-10 mobile:flex-col desktop:flex-row-reverse"
         >
-          <img
-            src={ImgDashgo}
-            alt=""
-            className="rounded-xl"
-            width={800}
-          />
-          <div className="flex h-full flex-col flex-wrap gap-4">
+          <div className="w-full rounded-2xl border border-slate-800/60 bg-slate-900/30 p-8">
             <div className="mb-4 flex flex-wrap items-center justify-start gap-3">
               <div className="w-fit overflow-hidden rounded-lg border border-transparent bg-gradient-to-b from-slate-700 to-slate-700/30 bg-origin-border">
                 <div className="flex items-center justify-center gap-2 bg-gradient-to-b from-slate-900 to-slate-900/40 px-6 py-2 text-slate-300">
@@ -266,6 +266,7 @@ export function ProjectsSection() {
                   <span className="text-sm text-indigo-200">ReactJS</span>
                 </div>
               </div>
+
               <div className="w-fit overflow-hidden rounded-lg border border-transparent bg-gradient-to-b from-slate-700 to-slate-700/30 bg-origin-border">
                 <div className="flex items-center justify-center gap-2 bg-gradient-to-b from-slate-900 to-slate-900/40 px-6 py-2 text-slate-300">
                   <img
@@ -278,14 +279,17 @@ export function ProjectsSection() {
                 </div>
               </div>
             </div>
+
             <h2 className="inline-flex bg-gradient-to-r text-white from-neutral-900 via-slate-500 to-neutral-500 bg-[200%_auto] bg-clip-text text-center text-3xl font-semibold leading-tight tracking-tighter text-transparent dark:from-neutral-100 dark:via-slate-400 dark:to-neutral-400">
               Dashgo
             </h2>
-            <p className=" text-left text-lg text-slate-400">
-              Dashboard administrativo desenvolvido durante o Ignite da Rocketseat
-              com o intuito de aprimorar habilidades em ReactJS e Styled Components.
+
+            <p className="mt-2 text-left text-lg text-slate-400">
+              Dashboard administrativo desenvolvido durante o Ignite da Rocketseat para
+              aprimorar habilidades em ReactJS e Styled Components.
             </p>
-            <div className="mt-4 flex items-center gap-3">
+
+            <div className="mt-4 flex flex-wrap items-center gap-3">
               <a
                 href="https://dashgo-cauandzn.vercel.app/dashboard"
                 target="_blank"
@@ -302,6 +306,123 @@ export function ProjectsSection() {
               >
                 <GithubLogo weight="bold" size={18} /> Código fonte
               </a>
+            </div>
+          </div>
+        </div>
+
+        {/* CONABOM */}
+        <div
+          data-aos="fade-right"
+          data-aos-duration="700"
+          data-aos-once="true"
+          className="flex w-full items-center gap-10 mobile:mt-10 mobile:flex-col desktop:flex-row"
+        >
+          <div className="w-full rounded-2xl border border-slate-800/60 bg-slate-900/30 p-8">
+            <div className="mb-4 flex flex-wrap items-center justify-start gap-3">
+              <div className="w-fit overflow-hidden rounded-lg border border-transparent bg-gradient-to-b from-slate-700 to-slate-700/30 bg-origin-border">
+                <div className="flex items-center justify-center gap-2 bg-gradient-to-b from-slate-900 to-slate-900/40 px-6 py-2 text-slate-300">
+                  <img
+                    src={styledComponentsIcon}
+                    alt="Ícone"
+                    width={20}
+                    height={20}
+                    className="opacity-0"
+                  />
+                  <span className="text-sm text-indigo-200">WordPress</span>
+                </div>
+              </div>
+
+              <div className="w-fit overflow-hidden rounded-lg border border-transparent bg-gradient-to-b from-slate-700 to-slate-700/30 bg-origin-border">
+                <div className="flex items-center justify-center gap-2 bg-gradient-to-b from-slate-900 to-slate-900/40 px-6 py-2 text-slate-300">
+                  <span className="text-sm text-indigo-200">PHP</span>
+                </div>
+              </div>
+            </div>
+
+            <h2 className="inline-flex bg-gradient-to-r text-white from-neutral-900 via-slate-500 to-neutral-500 bg-[200%_auto] bg-clip-text text-center text-3xl font-semibold leading-tight tracking-tighter text-transparent dark:from-neutral-100 dark:via-slate-400 dark:to-neutral-400">
+              CONABOM
+            </h2>
+
+            <p className="mt-2 text-left text-lg text-slate-400">
+              Site do Congresso Nacional do Corpo de Bombeiros (WordPress + PHP), com
+              portal de acesso à página de inscrição. Mais de{' '}
+              <strong className="text-slate-200">15.000 acessos</strong>.
+            </p>
+
+            <div className="mt-4 flex flex-wrap items-center gap-3">
+              <div className="flex w-fit items-center justify-center gap-2 rounded-md bg-slate-800 px-6 py-3 text-sm font-semibold tracking-tight text-slate-100">
+                Projeto privado / institucional
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Geração Tech */}
+        <div
+          data-aos="fade-left"
+          data-aos-duration="700"
+          data-aos-once="true"
+          className="flex w-full items-center gap-10 mobile:mt-10 mobile:flex-col desktop:flex-row-reverse"
+        >
+          <div className="w-full rounded-2xl border border-slate-800/60 bg-slate-900/30 p-8">
+            <div className="mb-4 flex flex-wrap items-center justify-start gap-3">
+              <div className="w-fit overflow-hidden rounded-lg border border-transparent bg-gradient-to-b from-slate-700 to-slate-700/30 bg-origin-border">
+                <div className="flex items-center justify-center gap-2 bg-gradient-to-b from-slate-900 to-slate-900/40 px-6 py-2 text-slate-300">
+                  <span className="text-sm text-indigo-200">PHP</span>
+                </div>
+              </div>
+            </div>
+
+            <h2 className="inline-flex bg-gradient-to-r text-white from-neutral-900 via-slate-500 to-neutral-500 bg-[200%_auto] bg-clip-text text-center text-3xl font-semibold leading-tight tracking-tighter text-transparent dark:from-neutral-100 dark:via-slate-400 dark:to-neutral-400">
+              Geração Tech — Portal de Inscrição
+            </h2>
+
+            <p className="mt-2 text-left text-lg text-slate-400">
+              Portal de inscrição desenvolvido em PHP. Cerca de{' '}
+              <strong className="text-slate-200">20.000 candidatos</strong> passaram
+              pelo portal.
+            </p>
+
+            <div className="mt-4 flex flex-wrap items-center gap-3">
+              <div className="flex w-fit items-center justify-center gap-2 rounded-md bg-slate-800 px-6 py-3 text-sm font-semibold tracking-tight text-slate-100">
+                Projeto privado / institucional
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Controllac */}
+        <div
+          data-aos="fade-right"
+          data-aos-duration="700"
+          data-aos-once="true"
+          className="flex w-full items-center gap-10 mobile:mt-10 mobile:flex-col desktop:flex-row"
+        >
+          <div className="w-full rounded-2xl border border-slate-800/60 bg-slate-900/30 p-8">
+            <div className="mb-4 flex flex-wrap items-center justify-start gap-3">
+              <div className="w-fit overflow-hidden rounded-lg border border-transparent bg-gradient-to-b from-slate-700 to-slate-700/30 bg-origin-border">
+                <div className="flex items-center justify-center gap-2 bg-gradient-to-b from-slate-900 to-slate-900/40 px-6 py-2 text-slate-300">
+                  <ReactOriginalIcon
+                    className="mobile:h-8 mobile:w-8 desktop:h-10 desktop:w-10"
+                    color={colors.indigo['300']}
+                  />
+                  <span className="text-sm text-indigo-200">React Native</span>
+                </div>
+              </div>
+            </div>
+
+            <h2 className="inline-flex bg-gradient-to-r text-white from-neutral-900 via-slate-500 to-neutral-500 bg-[200%_auto] bg-clip-text text-center text-3xl font-semibold leading-tight tracking-tighter text-transparent dark:from-neutral-100 dark:via-slate-400 dark:to-neutral-400">
+              Controllac
+            </h2>
+
+            <p className="mt-2 text-left text-lg text-slate-400">
+              Aplicativo em React Native para controle e gestão de laticínios.
+            </p>
+
+            <div className="mt-4 flex flex-wrap items-center gap-3">
+              <div className="flex w-fit items-center justify-center gap-2 rounded-md bg-slate-800 px-6 py-3 text-sm font-semibold tracking-tight text-slate-100">
+                Projeto privado / app
+              </div>
             </div>
           </div>
         </div>

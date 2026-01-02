@@ -2,7 +2,7 @@ import { Book, Briefcase } from 'phosphor-react'
 import { calcularIdade } from '../utils/age'
 import colors from 'tailwindcss/colors'
 
-import ProfileImage from '../assets/profile.png'
+import ProfileImage from '../assets/profile.jpg'
 
 export function AboutMeSection() {
   const dataNascimentoUsuario = new Date(2005, 9, 3)

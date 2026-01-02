@@ -8,7 +8,7 @@ import {
 import colors from 'tailwindcss/colors'
 
 import bgStars from '../assets/bg-stars.svg'
-import profileImg from '../assets/profile.png'
+import profileImg from '../assets/profile.jpg'
 
 export function CtaSection() {
   return (
